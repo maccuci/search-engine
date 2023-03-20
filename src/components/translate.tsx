@@ -192,7 +192,6 @@ const Translate = () => {
         if (lowerCaseKeys.includes(lowerCaseWord)) {
             setTranslation(TranslationsList[lowerCaseWord].toLowerCase());
         } else {
-            console.log("nosir");
             setTranslation("Palavra não encontrada");
         }
     };
