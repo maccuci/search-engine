@@ -200,7 +200,7 @@ const Translate = () => {
 
     return (
         <>
-            <h1 className="text-center text-2xl mt-3">Buscador Espanhol para Português</h1>
+            <h1 className="text-center text-2xl mt-3">Projeto FAPEMAT: Espanhol "Sem Moagem"</h1>
             <div className="flex justify-center mt-6">
                 <div className="flex w-full max-w-md">
                     <input
