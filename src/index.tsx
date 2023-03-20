@@ -8,7 +8,7 @@ export const App = () => {
             <footer className="flex flex-col items-center justify-center mt-12 md:ml-4 sm:ml-4 min-[300px]:ml-4">
                 <h2 className="text-xl">Veja o código do projeto em nosso repositório <a href="https://www.github.com/maccuci/search-engine" target={'_blank'} className='text-blue-600'>Clicando Aqui</a>.
                 </h2>
-                <p>Desevolvido por <a href="https://www.github.com/maccuci" target={'_blank'} className='text-blue-600'>Antônio Gabriel</a> e <a href="https://www.github.com/EuclidesVit" target={'_blank'} className='text-blue-600'>João Euclides</a>.</p>
+                <p>Desenvolvido por <a href="https://www.github.com/maccuci" target={'_blank'} className='text-blue-600'>Antônio Gabriel</a> e <a href="https://www.github.com/EuclidesVit" target={'_blank'} className='text-blue-600'>João Euclides</a>.</p>
             </footer>
         </>
     )
