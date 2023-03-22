@@ -220,7 +220,7 @@ const Translate = () => {
                     </form>
                 </div>
             </div>
-            <p className="text-center text-5xl mt-6">{translation.charAt(0).toUpperCase() + translation.slice(1)}</p>
+            <p className="text-center text-5xl mt-4 mb-4">{translation.charAt(0).toUpperCase() + translation.slice(1)}</p>
         </>
     );
 }
