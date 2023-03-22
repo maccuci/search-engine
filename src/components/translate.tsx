@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 type AssigmentTranslation = { [key: string]: string };
 
@@ -181,7 +181,7 @@ const TranslationsList: AssigmentTranslation = {
     "postre": "sobremesa",
     "senderismo": "caminhada",
     "galletas": "biscoitos"
-};
+}
 
 const Translate = () => {
     const [word, setWord] = useState("");
@@ -194,23 +194,30 @@ const Translate = () => {
         if (lowerCaseKeys.includes(lowerCaseWord)) {
             setTranslation(TranslationsList[lowerCaseWord].toLowerCase());
         } else {
-            setTranslation("Palavra não encontrada");
+            setTranslation("Palavra não encontrada.");
         }
     };
+
+    const handleSubmit = (e: any) => {
+        e.preventDefault();
+    }
 
     return (
         <>
             <h1 className="text-center text-2xl mt-3">Projeto FAPEMAT: Espanhol "Sem Moagem"</h1>
+            <img src="./logo.jfif" className="mx-auto mt-2" width={256} height={256} />
             <div className="flex justify-center mt-6">
                 <div className="flex w-full max-w-md">
-                    <input
-                        type="text"
-                        value={word}
-                        onChange={(e) => setWord(e.target.value)}
-                        className="block w-full px-5 py-2 bg-white border border-purple-200 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                        placeholder="Insira uma palavra"
-                    />
-                    <button onClick={handleTranslate} className="ml-2 px-4 text-white bg-green-600 rounded-md">Traduzir</button>
+                    <form className="flex w-full px-5 py-2" onSubmit={(e) => handleSubmit(e)}>
+                        <input
+                            type="text"
+                            value={word}
+                            onChange={(e) => setWord(e.target.value)}
+                            className="w-full px-5 py-2 bg-white border border-zinc-400 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                            placeholder="Insira uma palavra"
+                        />
+                        <button onClick={handleTranslate} className="ml-2 px-4 text-white bg-green-600 rounded-md">Buscar</button>
+                    </form>
                 </div>
             </div>
             <p className="text-center text-5xl mt-6">{translation.charAt(0).toUpperCase() + translation.slice(1)}</p>
